@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="nuke-py : A curated collection of python tools for Nuke" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>nuke-py</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mogga/nuke-py">View on GitHub</a>
+
+          <h1 id="project_title">nuke-py</h1>
+          <h2 id="project_tagline">A curated collection of python tools for Nuke</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mogga/nuke-py/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mogga/nuke-py/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="nuke-py" class="anchor" href="#nuke-py"><span class="octicon octicon-link"></span></a>nuke-py</h1>
+
+<p>This is my self-curated collection of python tools for Nuke.</p>
+
+<p>I take no author credit for any of these tools whether I've written them or not. They've come from many different people and morphed over the years into what they are now. They've all been cleaned up to
+match my own <a href="http://legacy.python.org/dev/peps/pep-0008/">PEP 8</a> preference for styling python code. 
+I'm not a fan of camelCase as it's too easily mistaken for Capitalized and I always favor indents of 2 spaces
+instead of 4 spaces or tabs. (despite VFX tendencies to prefer silly camelCase)</p>
+
+<h2>
+<a name="function-input-conventions" class="anchor" href="#function-input-conventions"><span class="octicon octicon-link"></span></a>Function Input Conventions</h2>
+
+<p>In general when I'm writing a tool that operates on a node, nodes, or all nodes I like to
+keep it open to what input it takes so alot of the rewrites involve tailoring functions
+in this manner. An example below:</p>
+
+<pre><code>def eat_my_nodes(nodes=[]):
+  if not nodes:
+    nodes=nuke.selectedNodes()
+  if not nodes:
+    nodes=nuke.allNodes()
+  if nodes:
+    for node in nodes:
+      eat_str = 'Eating Node: {0}'.format(node.name())
+      nuke.tprint(eat_str)
+    return
+  else:
+    return
+</code></pre>
+
+<p>This way I can use this function programatically somewhere else, I can pass in a list of nodes using nuke.SelectedNodes() or
+some other way, or I can let it run on it's own and it will work as well.</p>
+
+<h2>
+<a name="menus" class="anchor" href="#menus"><span class="octicon octicon-link"></span></a>Menus</h2>
+
+<p>I have another tool called MyNk that I use inside my dotnuke folder to automagically add this or other structures
+of python scripts to a namespaced python object. As part of that process the tool looks for the <strong>menus</strong> attribute
+in each function and uses that to generate my custom menus for me. The syntax is pretty straight forward. Here's
+an example for the above function.</p>
+
+<pre><code>__menus__ = {
+  'Tools/Info/Eat Selected Nodes':  {
+    'cmd': 'eat_my_nodes(nuke.selectedNodes())',
+    'hotkey': '',
+    'icon': ''
+  },
+  'Tools/Info/Eat All Read Nodes':  {
+    'cmd': 'eat_my_nodes(nuke.allNodes('Read'))',
+    'hotkey': '',
+    'icon': ''
+  }
+}
+</code></pre>
+
+<p>So that should make sense, although unless you're using the other tool or code like it you can ignore this.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">nuke-py maintained by <a href="https://github.com/mogga">mogga</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
