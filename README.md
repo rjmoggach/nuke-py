@@ -1,6 +1,6 @@
-# nuke-pytools
+# nuke-py
 
-This is a curated collection of python tools for Nuke.
+This is my self-curated collection of python tools for Nuke.
 
 I take no author credit for any of these whether I've written them or not. They've come from many different
 people and morphed over the years into what they are now. They've all been cleaned up to
