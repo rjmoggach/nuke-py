@@ -10,7 +10,7 @@
 #
 #   If loaded with the mynk tools loader:
 #     import nukescripts
-#     nukescripts.drop.addDropDataCallback(mynk.tools.python.utils.dragDrop.drop_handler)
+#     nukescripts.drop.addDropDataCallback(mynk.tools.python.utils.drag_drop.drop_handler)
 #
 # TODO: extend chan file import to give user options for node to create
 #

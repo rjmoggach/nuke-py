@@ -11,7 +11,7 @@ __menus__ = {
   'Tools/Create/Create Write Dirs': {
     'cmd': 'create_write_dirs(nuke.selectedNodes())',
     'hotkey': '#+w',
-    'icon': ''
+    'icon': 'create_write_dirs.png'
   }
 }
 

@@ -10,12 +10,12 @@ __menus__ = {
   'Tools/Camera/Camera to Card':  {
     'cmd': 'camera_to_card()',
     'hotkey': '',
-    'icon': ''
+    'icon': 'camera_to_card.png'
   },
   'Tools/Camera/Card to Camera':  {
     'cmd': 'card_to_camera()',
     'hotkey': '',
-    'icon': ''
+    'icon': 'camera_to_card.png'
   }
 }
 

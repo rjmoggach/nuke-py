@@ -9,8 +9,8 @@ import nuke
 __menus__ = {
   'Tools/Create/Dots': {
     'cmd': 'create_dots_for_nodes(nuke.selectedNodes())',
-    'hotkey': '#.',
-    'icon': ''
+    'hotkey': '+.',
+    'icon': 'create_dots.png'
   }
 }
 

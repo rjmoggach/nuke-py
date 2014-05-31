@@ -15,7 +15,6 @@ __menus__ = {
 }
 
 
-
 def show_read_write_info():
     """
     This panel gives you the number of reads that are either selected or in the entire script.

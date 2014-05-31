@@ -1,5 +1,18 @@
+import nuke
 
+# SHORT CUT SYNTAX
+# 'Ctrl-s' "^s"
+# 'Ctrl-Shift-s' "^+s"
+# 'Alt-Shift-s' "#+s"
+# 'Shift+F4' "+F4"
 
+__menus__ = {
+  'Tools/Edit/Select Advanced': {
+    'cmd': '',
+    'hotkey': '',
+    'icon': 'advanced_select.png'
+  }
+}
 
 select_classes(nodes=[], classes=['Write'], toggle=False):
   if not nodes:

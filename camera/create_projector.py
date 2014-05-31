@@ -11,7 +11,7 @@ __menus__ = {
   'Tools/Camera/Create Projector from Camera':  {
     'cmd': 'create_projector(nuke.selectedNodes())',
     'hotkey': '',
-    'icon': ''
+    'icon': 'create_projector.png'
   }
 }
 

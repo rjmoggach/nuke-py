@@ -10,7 +10,7 @@ __menus__ = {
   'Tools/Channel/Shuffle Layers': {
     'cmd': 'shuffleToLayers(nuke.selectedNodes())',
     'hotkey': '#s',
-    'icon': ''
+    'icon': 'shuffle_layers.png'
   }
 }
 

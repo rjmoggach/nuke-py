@@ -2,10 +2,11 @@
 
 This is a curated collection of python tools for Nuke.
 
-I take no author credit for any of these whether I've written them or not. They've all been cleaned up to
+I take no author credit for any of these whether I've written them or not. They've come from many different
+people and morphed over the years into what they are now. They've all been cleaned up to
 match my own [PEP 8](http://legacy.python.org/dev/peps/pep-0008/) preference for styling python code. 
 I'm not a fan of camelCase as it's too easily mistaken for Capitalized and I always favor indents of 2 spaces
-instead of 4 spaces or tabs.
+instead of 4 spaces or tabs. (despite VFX tendencies to prefer silly camelCase)
 
 ## Function Input Conventions
 
@@ -23,9 +24,9 @@ in this manner. An example below:
         for node in nodes:
           eat_str = 'Eating Node: {0}'.format(node.name())
           nuke.tprint(eat_str)
-        return True
+        return
       else:
-        return False
+        return
 
 
 This way I can use this function programatically somewhere else, I can pass in a list of nodes using nuke.SelectedNodes() or

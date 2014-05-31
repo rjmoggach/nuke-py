@@ -10,7 +10,7 @@ __menus__ = {
   'Tools/Create/Symbolic Links': {
     'cmd': 'create_symlinks_for_writes(nuke.selectedNodes())',
     'hotkey': '',
-    'icon': ''
+    'icon': 'create_symlinks.png'
   }
 }
 def create_symlinks_for_writes(nodes=[]):
