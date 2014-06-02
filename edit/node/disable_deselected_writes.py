@@ -7,7 +7,7 @@ import nuke
 # 'Shift+F4' "+F4"
 
 __menus__ = {
-  'Tools/Edit/Disable Deselected Write Nodes': {
+  'Tools/Edit/Node/Disable Deselected Write Nodes': {
     'cmd': 'disable_deselected_writes()',
     'hotkey': '',
     'icon': ''

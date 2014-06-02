@@ -1,5 +1,20 @@
+# shotgun.py
+#
+# this is a collection of useful shotgun related functions
+# for getting data in and out of shotgun
+#
+# most require the shotgun object which is created
+# via the shotgun api
+#
+# usually goes like this:
+# 
+# from shotgun_api3 import Shotgun
+# shotgun = Shotgun('https://' + 'studio shotgun url', 'myGreatShotgunTool', 'API Key')
+#
+# then call the function with the shotgun object
+#
 
-
+import re
 
 def get_fields_for_entity(shotgun, entity):
   """
@@ -39,7 +54,7 @@ def get_project(shotgun, project_name):
   return shotgun.find_one('Project', shotgun_query, return_fields)
 
 
-def get_project_sequence(shotgun, project, sequence_code):
+def get_sequence(shotgun, project, sequence_code):
   """
   get sequence for project
   Parameters : (shotgun, project, sequence)
@@ -53,7 +68,7 @@ def get_project_sequence(shotgun, project, sequence_code):
   return sequence
 
 
-def get_project_shot(shotgun, project, shot_code):
+def get_shot(shotgun, project, shot_code):
   """
   get shot for project
   Parameters : (shotgun, project, shot_code)
