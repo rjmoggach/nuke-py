@@ -10,7 +10,7 @@ import nuke
 
 __menus__ = {
   'Tools/Camera/Create Camera from V-Ray Metadata':  {
-    'cmd': 'create_vray_camera(nuke.selectedNodes())',
+    'cmd': 'createVrayCamera(nuke.selectedNodes())',
     'hotkey': '',
     'icon': ''
   }
@@ -18,7 +18,7 @@ __menus__ = {
 
 
 
-def create_vray_camera( node ):
+def createVrayCamera( node ):
   '''
   create camera with vray exr metadata
   looks at metadata in current pipe and creates

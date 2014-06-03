@@ -10,7 +10,7 @@
 #
 #   If loaded with the mynk tools loader:
 #     import nukescripts
-#     nukescripts.drop.addDropDataCallback(mynk.tools.python.utils.drag_drop.drop_handler)
+#     nukescripts.drop.addDropDataCallback(mynk.tools.python.utils.drag_drop.dropHandler)
 #
 # TODO: extend chan file import to give user options for node to create
 #
@@ -19,7 +19,7 @@ import os
 import nuke
 import nukescripts
 
-def file_handler(dropped_data):
+def fileHandler(dropped_data):
   file_path = dropped_data
   file_range= ''
   
@@ -63,20 +63,20 @@ def file_handler(dropped_data):
     return True
 
 
-def path_handler(dropped_data, recursive=True):
+def pathHandler(dropped_data, recursive=True):
   if os.path.isdir(dropped_data):
     for each in nuke.getFileNameList(dropped_data, False, False, bool(recursive), False):
-      path_handler(os.path.join(dropped_data,each))
+      pathHandler(os.path.join(dropped_data,each))
     return True
   else:
-    return file_handler(dropped_data)
+    return fileHandler(dropped_data)
 
 
-def drop_handler(droptype, dropped_data):
+def dropHandler(droptype, dropped_data):
   if dropped_data.startswith("file://"):
     dropped_data = dropped_data[7:]
   if os.path.isfile(dropped_data) or os.path.isdir(dropped_data):
-    return path_handler(dropped_data)
+    return pathHandler(dropped_data)
   return False
 
 

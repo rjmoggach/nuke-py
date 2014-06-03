@@ -2,13 +2,13 @@ import nuke
 
 __menus__ = {
   'Tools/Time/Append Clips':  {
-    'cmd': 'append_clips()',
+    'cmd': 'appendClips()',
     'hotkey': '',
     'icon': ''
   }
 }
 
-def append_clips():
+def appendClips():
   append_clip_node = nuke.nodes.AppendClip()
   all_read_nodes = [node for node in nuke.allNodes() if node.Class() == "Read"] 
   num_nodes = len(all_read_nodes)

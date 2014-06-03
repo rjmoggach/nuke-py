@@ -8,14 +8,14 @@ import nuke
 
 __menus__ = {
   'Tools/3D/Toggle Display Wireframe or Textured': {
-    'cmd': 'toggle_wireframe()',
+    'cmd': 'toggleWireframe()',
     'hotkey': '',
-    'icon': 'toggle_wireframe.png'
+    'icon': 'toggleWireframe.png'
   }
 }
 
 
-toggle_wireframe(nodes=[]):
+toggleWireframe(nodes=[]):
   if not nodes:
     nodes=nuke.selectedNodes()
   if not nodes:

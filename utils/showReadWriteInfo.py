@@ -8,14 +8,14 @@ import nuke
 
 __menus__ = {
   'Tools/Info/Show Read Write Info':  {
-    'cmd': 'show_read_write_info()',
+    'cmd': 'showReadWriteInfo()',
     'hotkey': '',
     'icon': ''
   }
 }
 
 
-def show_read_write_info():
+def showReadWriteInfo():
     """
     This panel gives you the number of reads that are either selected or in the entire script.
     Additionally, it tells you the path of either selected nodes or all read/write nodes.

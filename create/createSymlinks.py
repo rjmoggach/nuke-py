@@ -8,12 +8,12 @@ import nuke
 
 __menus__ = {
   'Tools/Create/Symbolic Links': {
-    'cmd': 'create_symlinks_for_writes(nuke.selectedNodes())',
+    'cmd': 'createSymlinks(nuke.selectedNodes())',
     'hotkey': '',
-    'icon': 'create_symlinks.png'
+    'icon': 'createSymlinks.png'
   }
 }
-def create_symlinks_for_writes(nodes=[]):
+def createSymlinks(nodes=[]):
   '''
   function that creates symbolic links to
   the selected read or write node image folders

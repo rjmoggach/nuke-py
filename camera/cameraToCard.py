@@ -8,18 +8,18 @@ import nuke
 
 __menus__ = {
   'Tools/Camera/Camera to Card':  {
-    'cmd': 'camera_to_card()',
+    'cmd': 'cameraToCard()',
     'hotkey': '',
-    'icon': 'camera_to_card.png'
+    'icon': 'cameraToCard.png'
   },
   'Tools/Camera/Card to Camera':  {
-    'cmd': 'card_to_camera()',
+    'cmd': 'cardToCamera()',
     'hotkey': '',
-    'icon': 'camera_to_card.png'
+    'icon': 'cardToCamera.png'
   }
 }
 
-def camera_to_card():
+def cameraToCard():
   trans_geo_str = ' '.join([
     'inputs {2}',
     'name {cameraToCard}',
@@ -42,7 +42,7 @@ def camera_to_card():
   trans_geo_node.setInput(1, camera_node)
   camera_node.setInput(1, axis_node)
 
-def card_to_camera():
+def cardToCamera():
   trans_geo_str = ' '.join([
     'name {cardToCamera}',
     'translate {0 0 "-this.distance"}',

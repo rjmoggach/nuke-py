@@ -9,9 +9,9 @@ import nuke
 
 __menus__ = {
   'Tools/Camera/Create Projector from Camera':  {
-    'cmd': 'create_projector(nuke.selectedNodes())',
+    'cmd': 'createProjector(nuke.selectedNodes())',
     'hotkey': '',
-    'icon': 'create_projector.png'
+    'icon': 'createProjector.png'
   }
 }
 
@@ -19,24 +19,24 @@ def clipboard():
   return "%clipboard%"
 
 
-def deselect_all_nodes():
+def deselectAllNodes():
   for node in nuke.allNodes():
     node['selected'].setValue(False)
 
 
-def copy_paste():
+def copyPaste():
   nuke.nodeCopy(clipboard())
-  deselect_all_nodes()
+  deselectAllNodes()
   nuke.nodePaste(clipboard())
 
 
-def create_projector(nodes=[]):
+def createProjector(nodes=[]):
   if not nodes:
     nuke.message('ERROR: No node(s) selected.')
     return
 
   for node in nodes:
-    deselect_all_nodes()
+    deselectAllNodes()
     if node.Class() in [ "Camera2", "Camera"]:
       node_name = node.name()
       frame = nuke.getInput("Frame to Project for {0}?".format(node_name))
@@ -46,7 +46,7 @@ def create_projector(nodes=[]):
         nuke.message("You must enter a frame number!")
         return 0
       node['selected'].setValue(True)
-      copy_paste()
+      copyPaste()
       new_camera = nuke.selectedNode()
       new_camera.addKnob(nuke.Int_Knob('ref_frame', 'Reference Frame'))
       new_camera['ref_frame'].setValue(int(frame))

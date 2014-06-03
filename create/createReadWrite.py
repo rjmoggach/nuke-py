@@ -12,19 +12,19 @@ from nukescripts import panels
 
 __menus__ = {
   'Tools/Create/Read from Write': {
-    'cmd': 'create_read_write(nuke.selectedNodes())',
+    'cmd': 'createReadWrite(nuke.selectedNodes())',
     'hotkey': '#+r',
     'icon': ''
   },
   'Tools/Create/Write from Read': {
-    'cmd': 'create_read_write(nuke.selectedNodes())',
+    'cmd': 'createReadWrite(nuke.selectedNodes())',
     'hotkey': '',
     'icon': ''
   }
 }
 
 
-def create_read_write(nodes=[], y_offset=80):
+def createReadWrite(nodes=[], y_offset=80):
   '''
   function to:
     create a read node from a write node

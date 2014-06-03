@@ -9,14 +9,14 @@ import nuke
 
 __menus__ = {
   'Tools/Create/Create Write Dirs': {
-    'cmd': 'create_write_dirs(nuke.selectedNodes())',
+    'cmd': 'createWriteDirs(nuke.selectedNodes())',
     'hotkey': '#+w',
-    'icon': 'create_write_dirs.png'
+    'icon': 'createWriteDirs.png'
   }
 }
 
 
-def create_write_dirs(nodes=[]):
+def createWriteDirs(nodes=[]):
   '''
   create write directories for selected write nodes
   supports stereo view notation with %v or %V

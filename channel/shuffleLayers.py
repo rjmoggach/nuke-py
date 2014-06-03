@@ -8,14 +8,14 @@ import nuke
 
 __menus__ = {
   'Tools/Channel/Shuffle Layers': {
-    'cmd': 'shuffleToLayers(nuke.selectedNodes())',
+    'cmd': 'shuffleLayers(nuke.selectedNodes())',
     'hotkey': '#s',
     'icon': 'shuffle_layers.png'
   }
 }
 
 
-def shuffleToLayers(nodes):
+def shuffleLayers(nodes):
   '''
   Shuffles a multi-layer EXR to multiple shuffle nodes
   '''

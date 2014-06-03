@@ -10,11 +10,11 @@ __menus__ = {
   'Tools/Edit/Select Advanced': {
     'cmd': '',
     'hotkey': '',
-    'icon': 'advanced_select.png'
+    'icon': 'selectClasses.png'
   }
 }
 
-select_classes(nodes=[], classes=['Write'], toggle=False):
+def selectClasses(nodes=[], classes=['Write'], toggle=False):
   if not nodes:
     nodes = nuke.allNodes()
     for node in nodes:

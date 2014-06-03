@@ -8,13 +8,13 @@ import nuke
 
 __menus__ = {
   'Tools/Edit/Set or Append Label(s)': {
-    'cmd': 'set_label()',
+    'cmd': 'setLabel()',
     'hotkey': 'F9',
-    'icon': 'set_label.png'
+    'icon': 'setLabel.png'
   }
 }
 
-def set_label(nodes=nuke.selectedNodes()):
+def setLabel(nodes=nuke.selectedNodes()):
     '''
     Quickly edit the label for a selected node
     or append a label to all selected nodes

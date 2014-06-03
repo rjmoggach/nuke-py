@@ -8,15 +8,15 @@ import nuke
 
 __menus__ = {
   'Tools/Create/Dots': {
-    'cmd': 'create_dots_for_nodes(nuke.selectedNodes())',
+    'cmd': 'createDots(nuke.selectedNodes())',
     'hotkey': '+.',
-    'icon': 'create_dots.png'
+    'icon': 'createDots.png'
   }
 }
 
 
 
-def create_dots_for_nodes(nodes):
+def createDots(nodes):
   '''
   Creates more organized trees using intermediary dots
   '''
